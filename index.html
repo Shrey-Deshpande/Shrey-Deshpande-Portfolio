@@ -4,12 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Shrey Deshpande | Data Science Portfolio</title>
+<meta name="description" content="Shrey Deshpande is a UIC data science student and IDX Exchange analyst intern looking for a Summer 2027 internship.">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;500;600&display=swap">
 <style>
-:root{--bg:#EEF1F8;--panel:#fff;--ink:#1B1F3B;--mute:#4F5578;--line:#CBD1E4;--gold:#F2A900;--teal:#0B6E78;--on-gold:#1B1F3B;color-scheme:light;
+:root{--bg:#EEF1F8;--panel:#fff;--ink:#1B1F3B;--mute:#4F5578;--line:#CBD1E4;--gold:#F2A900;--teal:#0B6E78;--on-gold:#1B1F3B;--bad:#B42318;--badbg:#FDECEA;color-scheme:light;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12142A;--panel:#1B1E3C;--ink:#ECEFF8;--mute:#A6ACCB;--line:#2F3460;--gold:#FFC23D;--teal:#55D6C8;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#12142A;--panel:#1B1E3C;--ink:#ECEFF8;--mute:#A6ACCB;--line:#2F3460;--gold:#FFC23D;--teal:#55D6C8;color-scheme:dark}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12142A;--panel:#1B1E3C;--ink:#ECEFF8;--mute:#A6ACCB;--line:#2F3460;--gold:#FFC23D;--teal:#55D6C8;--bad:#FF9A8F;--badbg:#3A1F2E;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#12142A;--panel:#1B1E3C;--ink:#ECEFF8;--mute:#A6ACCB;--line:#2F3460;--gold:#FFC23D;--teal:#55D6C8;--bad:#FF9A8F;--badbg:#3A1F2E;color-scheme:dark}
 html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 Figtree,system-ui,-apple-system,"Segoe UI",sans-serif}
@@ -32,20 +33,26 @@ h1{font-size:clamp(2.5rem,6.2vw,4.6rem);font-weight:800}
 .status i{width:10px;height:10px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(242,169,0,.28)}
 .btns{display:flex;gap:12px;flex-wrap:wrap}
 .btn{display:inline-block;padding:11px 20px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--ink);color:var(--ink)}
+button.btn{font:600 1rem Figtree,sans-serif;cursor:pointer;background:transparent}
 .btn.fill{background:var(--gold);border-color:var(--gold);color:var(--on-gold)}
-.btn:hover{transform:translateY(-2px)}
-.taal{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:22px}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.b{aspect-ratio:1;border-radius:50%;border:2px solid var(--line);background:transparent;color:var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;font:600 .78rem/1.15 Figtree,sans-serif;cursor:pointer;transition:transform .18s,background .18s}
-.b small{font-size:.66rem;color:var(--mute);font-weight:500}
+.btn:hover{translate:0 -2px}
+.taal{background:var(--panel);border:1px solid var(--line);border-radius:28px;padding:24px}
+.ring{position:relative;width:100%;max-width:400px;aspect-ratio:1;margin:0 auto}
+.ring::before{content:"";position:absolute;inset:8%;border-radius:50%;border:1px dashed var(--line)}
+.mid{position:absolute;inset:25%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:4px}
+.mid b{font:800 clamp(2rem,8vw,3.2rem)/1 "Bricolage Grotesque",sans-serif}
+.mid span{font-size:.85rem;color:var(--mute)}
+#snd{margin-top:8px;background:none;border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:4px 12px;font:500 .8rem Figtree,sans-serif;cursor:pointer}
+.b{position:absolute;width:15%;aspect-ratio:1;translate:-50% -50%;padding:0;border-radius:50%;border:2px solid var(--line);background:var(--panel);color:var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;font:600 .72rem/1.1 Figtree,sans-serif;cursor:pointer;transition:scale .18s,background .18s}
+.b small{font-size:.6rem;color:var(--mute);font-weight:500}
 .b.sam{background:var(--gold);border-color:var(--gold);color:var(--on-gold)}
 .b.sam small{color:var(--on-gold)}
 .b.tali{border-color:var(--teal);border-width:3px}
 .b.khali{border-style:dashed;border-color:var(--mute)}
-.b.on{transform:scale(1.12);background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.b.on{scale:1.18;background:var(--ink);border-color:var(--ink);color:var(--bg)}
 .b.on small{color:var(--bg)}
 .b.sam.on{background:var(--gold);border-color:var(--gold);color:var(--on-gold);box-shadow:0 0 0 7px rgba(242,169,0,.35)}
-.taal p{font-size:.88rem;color:var(--mute);margin:16px 2px 0;line-height:1.5}
+.taal p{font-size:.88rem;color:var(--mute);margin:18px 2px 0;line-height:1.5}
 .taal p b{color:var(--ink)}
 .sec{display:grid;grid-template-columns:190px 1fr;gap:32px;padding:56px 0;border-top:1px solid var(--line)}
 h2{font-size:1.7rem;font-weight:800}
@@ -56,11 +63,21 @@ h3{font-size:1.35rem;font-weight:800}
 ol.steps{list-style:none;margin:24px 0;padding:0 0 0 18px;border-left:2px solid var(--line);counter-reset:s}
 ol.steps li{position:relative;padding:0 0 18px 26px;counter-increment:s;max-width:60ch}
 ol.steps li::before{content:counter(s);position:absolute;left:-18px;top:-1px;width:30px;height:30px;border-radius:50%;background:var(--panel);border:2px solid var(--teal);color:var(--teal);font:700 .85rem/26px Figtree,sans-serif;text-align:center}
-.quote{border-left:5px solid var(--gold);padding:6px 0 6px 18px;margin:8px 0 40px;font:800 1.5rem/1.25 "Bricolage Grotesque",sans-serif;max-width:30ch}
+.quote{border-left:5px solid var(--gold);padding:6px 0 6px 18px;margin:8px 0 32px;font:800 1.5rem/1.25 "Bricolage Grotesque",sans-serif;max-width:30ch}
 .quote span{display:block;font:400 .95rem/1.5 Figtree,sans-serif;color:var(--mute);margin-top:6px}
-.proj{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:24px}
+.demo{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px;margin:0 0 32px}
+.demo p{margin:0 0 4px}
+.scroll{overflow-x:auto;margin:14px 0}
+table{border-collapse:collapse;width:100%;min-width:540px;font-size:.92rem}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);white-space:nowrap}
+th{color:var(--mute);font-weight:600}
+tr.bad{background:var(--badbg)}
+tr.bad td:last-child{color:var(--bad);font-weight:600}
+.bar{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.proj{border-top:1px solid var(--line);padding-top:32px;margin-top:40px}
 .tags{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0;padding:0;list-style:none}
-.tags li{border:1px solid var(--line);border-radius:999px;padding:3px 13px;font-size:.9rem;background:var(--bg)}
+.tags li{border:1px solid var(--line);border-radius:999px;padding:3px 13px;font-size:.9rem;background:var(--panel)}
+.tags.hi li{background:var(--gold);border-color:var(--gold);color:var(--on-gold);font-weight:600}
 dl{margin:0;display:grid;grid-template-columns:150px 1fr;gap:14px 20px}
 dt{font-weight:600;color:var(--mute)}dd{margin:0}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:22px 0 30px}
@@ -69,7 +86,7 @@ dt{font-weight:600;color:var(--mute)}dd{margin:0}
 footer{padding:48px 0 64px;border-top:1px solid var(--line);color:var(--mute);font-size:.9rem}
 .big{font:800 clamp(1.8rem,4vw,2.8rem)/1.1 "Bricolage Grotesque",sans-serif;margin-bottom:20px;max-width:20ch}
 @media (max-width:820px){.hero{grid-template-columns:1fr;padding-top:44px}.sec{grid-template-columns:1fr;gap:16px}.stats{grid-template-columns:repeat(2,1fr)}dl{grid-template-columns:1fr;gap:2px}dd{margin-bottom:12px}nav{display:none}}
-@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.btn:hover{transform:none}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.btn:hover{translate:none}}
 </style>
 </head>
 <body>
@@ -88,8 +105,10 @@ footer{padding:48px 0 64px;border-top:1px solid var(--line);color:var(--mute);fo
 <div class="btns"><a class="btn fill" href="#work">See my work</a><a class="btn" href="mailto:deshpandeshrey48@gmail.com">Say hello</a></div>
 </div>
 <div class="taal">
-<div class="grid" id="grid" role="group" aria-label="Teental, a 16-beat tabla cycle. Select a beat."></div>
-<p><b>Teental</b> is a 16-beat tabla cycle in four groups. Beat 1 is <b>sam</b> (gold), beats 5 and 13 are <b>tali</b> (claps, teal rings), and beat 9 is <b>khali</b> (a wave, dashed). Tap any beat. Patterns repeat in rhythm and in data.</p>
+<div class="ring" id="ring" role="group" aria-label="Teental, a 16-beat tabla cycle. Select a beat.">
+<div class="mid"><b id="bol">Dha</b><span id="num">Beat 1 of 16</span><button id="snd" type="button" aria-pressed="false">Sound: off</button></div>
+</div>
+<p><b>Teental</b> is a 16-beat tabla cycle in four groups. Beat 1 is <b>sam</b> (gold), beats 5 and 13 are <b>tali</b> (claps, teal rings), and beat 9 is <b>khali</b> (a wave, dashed). Tap any beat, or turn on sound. Patterns repeat in rhythm and in data.</p>
 </div>
 </section>
 
@@ -98,6 +117,7 @@ footer{padding:48px 0 64px;border-top:1px solid var(--line);color:var(--mute);fo
 <div>
 <p>I’m an honors Data Science student at the University of Illinois Chicago, with a Health Data Science concentration and a 4.00 GPA. I’ve made the Dean’s List four semesters in a row.</p>
 <p>I like work where the data starts out untidy: files that don’t line up, columns that are mostly empty, dates that happen in the wrong order. Cleaning that up and turning it into something clear is what I’ve been doing at IDX Exchange, and it’s the work I want more of next summer.</p>
+<ul class="tags hi"><li>4.00 GPA</li><li>Dean’s List, 4 semesters</li><li>Honors, Health Data Science</li></ul>
 </div>
 </section>
 
@@ -114,6 +134,22 @@ footer{padding:48px 0 64px;border-top:1px solid var(--line);color:var(--mute);fo
 <li><b>Show.</b> Built Tableau dashboards tracking close price, list price, and days on market for stakeholder-facing housing market reports.</li>
 </ol>
 <div class="quote">Flag it, don’t delete it.<span>My data quality layer marks bad records so no source data is ever lost.</span></div>
+
+<div class="demo">
+<div class="role"><h3>Try the flag step</h3><span class="when">Made-up sample rows, not real data</span></div>
+<p>Run the same kinds of checks on five invented listings and see what happens to the bad ones.</p>
+<div class="scroll"><table id="q">
+<thead><tr><th>ID</th><th>Listed</th><th>Closed</th><th>Close price</th><th>Latitude</th><th>Flag</th></tr></thead>
+<tbody>
+<tr><td>1042</td><td>2025-03-02</td><td>2025-04-11</td><td>$512,000</td><td>41.89</td><td></td></tr>
+<tr data-f="Closed before listed"><td>1043</td><td>2025-04-20</td><td>2025-03-28</td><td>$389,500</td><td>41.93</td><td></td></tr>
+<tr data-f="Negative price"><td>1044</td><td>2025-02-14</td><td>2025-03-30</td><td>-$1,200</td><td>41.87</td><td></td></tr>
+<tr data-f="Latitude out of range"><td>1045</td><td>2025-05-01</td><td>2025-06-02</td><td>$640,000</td><td>141.90</td><td></td></tr>
+<tr><td>1046</td><td>2025-03-09</td><td>2025-04-18</td><td>$455,000</td><td>41.82</td><td></td></tr>
+</tbody></table></div>
+<div class="bar"><button class="btn fill" id="run" type="button">Run quality checks</button><span id="res" aria-live="polite">5 rows, unchecked</span></div>
+</div>
+
 <p>Along the way I profiled close price, list price, living area, and days on market, wrote distribution summaries, and flagged every column with more than 90% missing values.</p>
 
 <div class="proj">
@@ -139,10 +175,10 @@ footer{padding:48px 0 64px;border-top:1px solid var(--line);color:var(--mute);fo
 <h3>AYUDH, Local Chapter Representative</h3>
 <p style="margin-top:8px">I coordinate retreats for an international youth organization, built around civil service and community engagement, and lead volunteer drives in my area.</p>
 <div class="stats">
-<div class="stat"><strong data-n="400">400+</strong><span>retreat participants coordinated</span></div>
-<div class="stat"><strong data-n="100">100+</strong><span>trees planted</span></div>
-<div class="stat"><strong data-n="60">60+</strong><span>blessing bags distributed</span></div>
-<div class="stat"><strong data-n="100">100+</strong><span>meals provided for people experiencing homelessness</span></div>
+<div class="stat"><strong>400+</strong><span>retreat participants coordinated</span></div>
+<div class="stat"><strong>100+</strong><span>trees planted</span></div>
+<div class="stat"><strong>60+</strong><span>blessing bags distributed</span></div>
+<div class="stat"><strong>100+</strong><span>meals provided for people experiencing homelessness</span></div>
 </div>
 <h3>ACM, UIC Chapter</h3>
 <p style="margin-top:8px">I go to ACM SIG AI events to keep up with current AI research and talk with industry professionals and academic researchers.</p>
@@ -168,24 +204,36 @@ footer{padding:48px 0 64px;border-top:1px solid var(--line);color:var(--mute);fo
 </div>
 </section>
 </main>
-<footer><div class="wrap">Shrey Deshpande, Chicago, IL</div></footer>
+<footer><div class="wrap">Shrey Deshpande, Chicago, IL. <a href="#top">Back to top</a></div></footer>
 
 <script>
 (function(){
+var red=matchMedia("(prefers-reduced-motion:reduce)").matches;
 var bols=["Dha","Dhin","Dhin","Dha","Dha","Dhin","Dhin","Dha","Na","Tin","Tin","Na","Ta","Dhin","Dhin","Dha"];
-var g=document.getElementById("grid"),beats=[],cur=0,timer;
+var ring=document.getElementById("ring"),bol=document.getElementById("bol"),num=document.getElementById("num"),sb=document.getElementById("snd"),beats=[],cur=0,timer,ac,sound=false;
 bols.forEach(function(b,i){
-var e=document.createElement("button");e.type="button";e.className="b"+(i==0?" sam":(i==4||i==12)?" tali":i==8?" khali":"");
+var a=i*Math.PI/8,e=document.createElement("button");
+e.type="button";e.className="b"+(i==0?" sam":i==4||i==12?" tali":i==8?" khali":"");
+e.style.left=(50+42*Math.sin(a))+"%";e.style.top=(50-42*Math.cos(a))+"%";
 e.setAttribute("aria-label","Beat "+(i+1)+", "+b);e.innerHTML=b+"<small>"+(i+1)+"</small>";
-e.onclick=function(){go(i);start()};g.appendChild(e);beats.push(e)});
-function go(i){beats[cur].classList.remove("on");cur=i;beats[cur].classList.add("on")}
-function start(){clearInterval(timer);if(!matchMedia("(prefers-reduced-motion:reduce)").matches)timer=setInterval(function(){go((cur+1)%16)},650)}
+e.onclick=function(){go(i);start()};ring.appendChild(e);beats.push(e)});
+function hit(b){
+if(!sound)return;
+var t=ac.currentTime,lo=b.charAt(0)=="D",o=ac.createOscillator(),g=ac.createGain();
+o.frequency.setValueAtTime(lo?190:520,t);o.frequency.exponentialRampToValueAtTime(lo?70:380,t+.12);
+g.gain.setValueAtTime(.3,t);g.gain.exponentialRampToValueAtTime(.001,t+.3);
+o.connect(g);g.connect(ac.destination);o.start(t);o.stop(t+.32)}
+function go(i){beats[cur].classList.remove("on");cur=i;beats[cur].classList.add("on");bol.textContent=bols[i];num.textContent="Beat "+(i+1)+" of 16";hit(bols[i])}
+function start(){clearInterval(timer);if(!red)timer=setInterval(function(){go((cur+1)%16)},650)}
+sb.onclick=function(){sound=!sound;if(sound){ac=ac||new(window.AudioContext||window.webkitAudioContext)();if(ac.resume)ac.resume()}sb.textContent="Sound: "+(sound?"on":"off");sb.setAttribute("aria-pressed",sound)};
 go(0);start();
-var ts=document.querySelectorAll(".stat strong");
-function count(el){var n=+el.dataset.n,t0=null;function f(t){t0=t0||t;var p=Math.min((t-t0)/1100,1);el.textContent=Math.round(n*(1-Math.pow(1-p,3)))+"+";if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f)}
-if("IntersectionObserver" in window&&!matchMedia("(prefers-reduced-motion:reduce)").matches){
-var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){count(x.target);io.unobserve(x.target)}})},{threshold:.6});
-ts.forEach(function(t){io.observe(t)})}
+
+var run=document.getElementById("run"),res=document.getElementById("res"),rows=document.querySelectorAll("#q tr[data-f]"),on=false;
+run.onclick=function(){on=!on;
+rows.forEach(function(r){r.classList.toggle("bad",on);r.lastElementChild.textContent=on?r.dataset.f:""});
+run.textContent=on?"Reset":"Run quality checks";
+res.textContent=on?rows.length+" of 5 rows flagged, 0 deleted. Source data intact.":"5 rows, unchecked"};
+
 var r=document.documentElement;
 try{var s=localStorage.getItem("theme");if(s)r.setAttribute("data-theme",s)}catch(e){}
 document.getElementById("theme").onclick=function(){
